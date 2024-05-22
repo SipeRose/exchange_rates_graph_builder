@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="author" content="Nikita Volkov">
+        <title>Считыватель данных</title>
+        <script type="text/javascript" src="/eel.js"></script>
+        <link rel="icon" type="image/png" href="aton.png">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div>
+            <img src="aton.png" alt="aton">
+        </div>
+        <div>
+            <h1>Выберите валюты стран и диапазон дат</h1>
+            <br>
+            <select name="countries_currencies" id="currencies" class="countries" multiple>
+                <option value="Доллар США">Доллар США</option>
+                <option value="ЕВРО">ЕВРО</option>
+                <option value="Фунт стерлингов">Фунт стерлингов</option>
+                <option value="Японская йена">Японская йена</option>
+                <option value="Турецкая лира">Турецкая лира</option>
+                <option value="Индийская рупия">Индийская рупия</option>
+                <option value="Китайский юань Жэньминьби">Китайский юань Жэньминьби</option>
+                <option value="Швейцарский франк">Швейцарский франк</option>
+                <option value="Австралийский доллар">Австралийский доллар</option>
+                <option value="Азербайджанский манат">Азербайджанский манат</option>
+                <option value="Армянский драм">Армянский драм</option>
+                <option value="Белорусский рубль">Белорусский рубль</option>
+                <option value="Болгарский лев">Болгарский лев</option>
+                <option value="Бразильский реал">Бразильский реал</option>
+                <option value="Венгерский форинт">Венгерский форинт</option>
+                <option value="Вона Республики Корея">Вона Республики Корея</option>
+                <option value="Вьетнамский донг">Вьетнамский донг</option>
+                <option value="Гонконгский доллар">Гонконгский доллар</option>
+                <option value="Грузинский лари">Грузинский лари</option>
+                <option value="Датская крона">Датская крона</option>
+                <option value="Дирхам ОАЭ">Дирхам ОАЭ</option>
+                <option value="Египетский фунт">Египетский фунт</option>
+                <option value="Индонезийская рупия">Индонезийская рупия</option>
+                <option value="Казахстанский тенге">Казахстанский тенге</option>
+                <option value="Канадский доллар">Канадский доллар</option>
+                <option value="Катарский реал">Катарский реал</option>
+                <option value="Киргизский сом">Киргизский сом</option>
+                <option value="Латвийский лат">Латвийский лат</option>
+                <option value="Литовский лит">Литовский лит</option>
+                <option value="Молдавский лей">Молдавский лей</option>
+                <option value="Новозеландский доллар">Новозеландский доллар</option>
+                <option value="Новый туркменский манат">Новый туркменский манат</option>
+                <option value="Норвежская крона">Норвежская крона</option>
+                <option value="Польский злотый">Польский злотый</option>
+                <option value="Румынский лей">Румынский лей</option>
+                <option value="СДР (спец. прав заим-я)">СДР (спец. прав заим-я)</option>
+                <option value="Сербский динар">Сербский динар</option>
+                <option value="Сингапурский доллар">Сингапурский доллар</option>
+                <option value="Таджикский сомони">Таджикский сомони</option>
+                <option value="Тайландский бат">Тайландский бат</option>
+                <option value="Узбекский сум">Узбекский сум</option>
+                <option value="Украинская гривна">Украинская гривна</option>
+                <option value="Чешская крона">Чешская крона</option>
+                <option value="Шведская крона">Шведская крона</option>
+                <option value="Эстонская крона">Эстонская крона</option>
+                <option value="Южноафриканский рэнд">Южноафриканский рэнд</option>
+            </select>
+            <br><br>
+            <select name="first_day" id="first_day">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="first_month" id="first_month">
+                <option value="января" selected>января</option>
+                <option value="февраля">февраля</option>
+                <option value="марта">марта</option>
+                <option value="апреля">апреля</option>
+                <option value="мая">мая</option>
+                <option value="июня">июня</option>
+                <option value="июля">июля</option>
+                <option value="августа">августа</option>
+                <option value="сентября">сентября</option>
+                <option value="октября">октября</option>
+                <option value="ноября">ноября</option>
+                <option value="декабря">декабря</option>
+            </select>
+            <select name="first_year" id="first_year">
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023" selected>2023</option>
+                <option value="2024">2024</option>
+            </select>
+            <br><br>
+            <select name="last_day" id="last_day">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+            </select>
+            <select name="last_month" id="last_month">
+                <option value="января" selected>января</option>
+                <option value="февраля">февраля</option>
+                <option value="марта">марта</option>
+                <option value="апреля">апреля</option>
+                <option value="мая">мая</option>
+                <option value="июня">июня</option>
+                <option value="июля">июля</option>
+                <option value="августа">августа</option>
+                <option value="сентября">сентября</option>
+                <option value="октября">октября</option>
+                <option value="ноября">ноября</option>
+                <option value="декабря">декабря</option>
+            </select>
+            <select name="last_year" id="last_year">
+                <option value="1992">1992</option>
+                <option value="1993">1993</option>
+                <option value="1994">1994</option>
+                <option value="1995">1995</option>
+                <option value="1996">1996</option>
+                <option value="1997">1997</option>
+                <option value="1998">1998</option>
+                <option value="1999">1999</option>
+                <option value="2000">2000</option>
+                <option value="2001">2001</option>
+                <option value="2002">2002</option>
+                <option value="2003">2003</option>
+                <option value="2004">2004</option>
+                <option value="2005">2005</option>
+                <option value="2006">2006</option>
+                <option value="2007">2007</option>
+                <option value="2008">2008</option>
+                <option value="2009">2009</option>
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024" selected>2024</option>
+            </select>
+            <br><br>
+            <button id="build_graphs">Построить графики</button>
+        </div>
+
+        <script>
+            async function press_get_currencies_button() {
+                let First_day = document.getElementById("first_day").value;
+                let First_month = document.getElementById('first_month').value;
+                let First_year = document.getElementById('first_year').value;
+                let Last_day = document.getElementById('last_day').value;
+                let Last_month = document.getElementById('last_month').value;
+                let Last_year = document.getElementById('last_year').value;
+
+                let Countries_currencies = document.getElementById("currencies");
+                var values = [];
+
+                if (Countries_currencies.multiple) {
+                    for (var i = 0; i < Countries_currencies.options.length; i++) {
+                        if (Countries_currencies.options[i].selected)
+                        values.push(Countries_currencies.options[i].value);
+                    }
+                } else
+                values.push(Countries_currencies.value)
+
+                await eel.click_graph_build_button(values, First_day, First_month, First_year, Last_day, Last_month, Last_year)();
+            }
+
+            document.getElementById("build_graphs").onclick = press_get_currencies_button;
+        </script>
+    </body>
+</html>
