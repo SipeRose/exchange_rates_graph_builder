@@ -1,1 +1,0 @@
-url = 'https://www.finmarket.ru/currency/rates/?id=10148&pv=1&cur=52148&bd=1&bm=2&by=2022&ed=1&em=2&ey=2024&x=65&y=16#archive'
